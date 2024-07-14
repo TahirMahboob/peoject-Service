@@ -120,108 +120,108 @@ function Ghakhar() {
         <div className="w-full mt-10 lg:w-2/3 mx-auto flex flex-col justify-center mb-32 text-[#9c9b9b]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <a
-                href="#"
+              <p
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Khreembad
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Satluj-Block
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Hajvery-Block
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Sawan-Block
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Indus-Block
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Jhelum-Block
-              </a>
+              </p>
+
             </div>
             <div>
-              <a
-                href="/request-a-quote"
+              <p
+                
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Jinnah Town
-              </a>
-              <a
-                href="https://berryclean.launch27.com/login"
+              </p>
+              <p
+               
                 target="_blank"
                 className="block mt-2"
               >
                 Dhully
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 College Road
-              </a>
-              <a href="/refer" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Pizza Hut chownk
-              </a>
-              <a href="/members" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 C-Block
-              </a>
-              <a href="/cleaning-gift-card" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Allah chownk
-              </a>
+              </p>
             </div>
             <div className="mt-6 lg:mt-0">
-              <a
-                href="/request-a-quote"
+              <p
+               
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Chadar Town
-              </a>
-              <a
-                href="https://berryclean.launch27.com/login"
+              </p>
+              <p
+               
                 target="_blank"
                 className="block mt-2"
               >
                 Client portal
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Book now
-              </a>
-              <a href="/refer" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Refer a friend
-              </a>
-              <a href="/members" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Memberships
-              </a>
-              <a href="/cleaning-gift-card" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Gift cards
-              </a>
+              </p>
             </div>
             <div className="mt-6 lg:mt-0">
-              <a
-                href="/request-a-quote"
+              <p
+               
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Sultan pura
-              </a>
-              <a
-                href="https://berryclean.launch27.com/login"
+              </p>
+              <p
+              
                 target="_blank"
                 className="block mt-2"
               >
                 Block A
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Block B
-              </a>
-              <a href="/refer" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Block C
-              </a>
-              <a href="/members" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Block D
-              </a>
-              <a href="/cleaning-gift-card" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Block E
-              </a>
+              </p>
             </div>
           </div>
         </div>

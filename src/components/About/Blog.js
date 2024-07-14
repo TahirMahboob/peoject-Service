@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Hero from "../Hero"
 import Footer from '../Footer'; 
-import BlogImage from '../../assests/images/dcColony.jpg'
+import BlogImage from '../../assests/images/blog.jpg'
 
 
 
@@ -24,21 +24,7 @@ const mediaItems = [
 ];
 
 const Gallery = () => {
-  const [selectedMediaIndex, setSelectedMediaIndex] = useState(null);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: selectedMediaIndex || 0,
-  };
-
-  const handleClick = (index) => {
-    setSelectedMediaIndex(index);
-  };
-
+ 
   return (
     <>
     <Hero text="Gallery" text1 ="services" image={BlogImage} />
@@ -49,7 +35,6 @@ const Gallery = () => {
           <div
             key={index}
             className="cursor-pointer"
-            onClick={() => handleClick(index)}
           >
             {item.type === 'image' ? (
               <img

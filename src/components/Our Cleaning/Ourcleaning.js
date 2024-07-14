@@ -82,36 +82,36 @@ function Ourcleaning() {
                       {isServicesOpen && (
                         <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                           <Link to='/colony'>
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Dc Colony
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/Town">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Model Town
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/Ghakhar">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Ghakhar
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/sattelite">
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Satellite Town
-                            </a>
+                            </p>
                           </Link>
                         </div>
                       )}
@@ -142,20 +142,20 @@ function Ourcleaning() {
                       {isAboutOpen && (
                         <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                           <Link to="/faq">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               FAQs
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/blog">
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Blog
-                            </a>
+                            </p>
                           </Link>
                          
 
@@ -188,30 +188,30 @@ function Ourcleaning() {
                       {isClientPortalOpen && (
                         <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                           <Link to="/login">
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                               Login
-                            </a>
+                            </p>
                           </Link>
 
                           <Link to="/book">
-                            <a
+                            <p
                            
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                               Book Now
-                            </a>
+                            </p>
                           </Link>
 
                           <Link to="/register">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                              Register
-                            </a>
+                            </p>
                           </Link>
                           
                         </div>
@@ -264,12 +264,12 @@ function Ourcleaning() {
           {isMobileMenuOpen && (
             <div className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white mt-[25px]">
-                <a
+                <p
                   href="/"
                   className="text-lg font-medium text-gray-500 hover:text-white block px-3 py-2 rounded-md "
                 >
                   Services
-                </a>
+                </p>
 
              <div className="relative">
   <button
@@ -336,20 +336,20 @@ function Ourcleaning() {
                   {isAboutOpen && (
                     <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                       <Link to="/faq">
-                        <a
+                        <p
                          
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
                           FAQs
-                        </a>
+                        </p>
                       </Link>
                       <Link to="/blog">
-                        <a
+                        <p
                          
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
                           Blog
-                        </a>
+                        </p>
                       </Link>
 
                       
@@ -382,30 +382,30 @@ function Ourcleaning() {
                   {isClientPortalOpen && (
                     <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                       <Link to="/login">
-                        <a
+                        <p
                          
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                         >
                           Login
-                        </a>
+                        </p>
                       </Link>
 
                       <Link to="/book">
-                        <a
+                        <p
                         
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                         >
                           Book Now
-                        </a>
+                        </p>
                       </Link>
 
                       <Link to="/register">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                              Register
-                            </a>
+                            </p>
                           </Link>
 
                     </div>
@@ -533,7 +533,7 @@ function Ourcleaning() {
             ].map((card, index) => (
               <div className="w-full md:w-1/3 p-4" key={index}>
                 <div className="flex flex-col h-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md mx-auto">
-                  <img src={card.img} className="w-full rounded-t-lg" alt="Card image" />
+                  <img src={card.img} className="w-full rounded-t-lg" alt="Card" />
                   <div className="p-4 flex flex-col flex-grow">
                     <h5 className="text-lg font-medium text-[1.4rem] text-neutral-800">
                       {card.title}
@@ -580,7 +580,7 @@ function Ourcleaning() {
                     <img
                       src="./images/Worker1.jpg"
                       className="w-full rounded-t-lg"
-                      alt="Card image"
+                      alt="Card"
                     />
                     <div className="p-4 flex-grow">
                       <h5 className="text-lg font-medium text-[1.4rem] text-neutral-800">
@@ -601,7 +601,7 @@ function Ourcleaning() {
                     <img
                       src="./images/Worker2.jpg"
                       className="w-full rounded-t-lg"
-                      alt="Card image"
+                      alt="Card"
                     />
                     <div className="p-4 flex-grow">
                       <h5 className="text-lg font-medium text-[1.4rem] text-neutral-800">
@@ -621,7 +621,7 @@ function Ourcleaning() {
                     <img
                       src="./images/Worker3.jpg"
                       className="w-full rounded-t-lg"
-                      alt="Card image"
+                      alt="Card"
                     />
                     <div className="p-4 flex-grow">
                       <h5 className="text-lg font-medium text-[1.4rem] text-neutral-800">
@@ -641,7 +641,7 @@ function Ourcleaning() {
                     <img
                       src="./images/Worker4.jpg"
                       className="w-full rounded-t-lg"
-                      alt="Card image"
+                      alt="Card"
                     />
                     <div className="p-4 flex-grow">
                       <h5 className="text-lg font-medium text-[1.4rem] text-neutral-800">
@@ -683,104 +683,104 @@ function Ourcleaning() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
            
             <div>
-              <a
-                href="#"
+            <p
+              
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Dc-Colony
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Indus Block
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Jhelum Block
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                 Ravi Block
-              </a>
+              </p>
               
             </div>
 
             <div>
-              <a
-                href="/request-a-quote"
+              <p
+               
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Model-Town
-              </a>
-              <a
-                href="https://berryclean.launch27.com/login"
+              </p>
+              <p
+               
                 target="_blank"
                 className="block mt-2"
               >
                 Dhully
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 College Road
-              </a>
-              <a href="/refer" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                HFC   Model Town
-              </a>
-              <a href="/members" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                The Educator Campus
-              </a>
+              </p>
               
             </div>
 
             <div className="mt-6 lg:mt-0">
-              <a
-                href="/request-a-quote"
+              <p
+              
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Ghakhar
-              </a>
-              <a
-                href="https://berryclean.launch27.com/login"
+              </p>
+              <p
+               
                 target="_blank"
                 className="block mt-2"
               >
                Khreembad
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p className="block mt-2">
               Sardar Town
-              </a>
-              <a href="/refer" className="block mt-2">
+              </p>
+              <p className="block mt-2">
                Jinnah Town
-              </a>
-              <a href="/members" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Chadar Town
-              </a>
-              <a href="/cleaning-gift-card" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Sultan Pura 
-              </a>
+              </p>
             </div>
 
             <div className="mt-6 lg:mt-0">
-              <a
-                href="/request-a-quote"
+              <p
+               
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Satellite-Town
-              </a>
-              <a
-                href="https://berryclean.launch27.com/login"
+              </p>
+              <p
+               
                 target="_blank"
                 className="block mt-2"
               >
                Police LInes
-              </a>
-              <a href="#" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                Town Market
-              </a>
-              <a href="/refer" className="block mt-2">
+              </p>
+              <p className="block mt-2">
              Wahdat Colony
-              </a>
-              <a href="/members" className="block mt-2">
+              </p>
+              <p  className="block mt-2">
                 Rasheed Colony
-              </a>
-              <a href="/cleaning-gift-card" className="block mt-2">
+              </p>
+              <p className="block mt-2">
               Abdullah Colony
-              </a>
+              </p>
             </div>
 
           </div>

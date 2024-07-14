@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import Hero from "../Hero"
+import BlogImage from '../../assests/images/blog.jpg'
+
 import Footer from '../Footer'; 
 
 
@@ -8,7 +9,8 @@ function Book() {
   
   return (
     <>
-    <Hero text="Book" text1 ="services Now"/>
+    
+    <Hero text="Book" text1 ="services Now" image={BlogImage} />
     <div className="page-wrapper">
     <div className="section-2">
       <div className="container mx-auto p-8">
@@ -188,7 +190,8 @@ function Book() {
 
       </div>
     </div>
-  </div>
+    </div>
+    
   <Footer/>
 </>
 

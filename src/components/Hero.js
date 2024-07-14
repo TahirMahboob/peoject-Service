@@ -83,36 +83,36 @@ import { Link } from "react-router-dom";
                       {isServicesOpen && (
                         <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                           <Link to='/colony'>
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Dc Colony
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/Town">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Model Town
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/Ghakhar">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Ghakhar
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/sattelite">
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Satellite Town
-                            </a>
+                            </p>
                           </Link>
                         </div>
                       )}
@@ -143,20 +143,20 @@ import { Link } from "react-router-dom";
                       {isAboutOpen && (
                         <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                           <Link to="/faq">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               FAQs
-                            </a>
+                            </p>
                           </Link>
                           <Link to="/blog">
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               Blog
-                            </a>
+                            </p>
                           </Link>
                          
 
@@ -189,30 +189,30 @@ import { Link } from "react-router-dom";
                       {isClientPortalOpen && (
                         <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                           <Link to="/login">
-                            <a
+                            <p
                             
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                               Login
-                            </a>
+                            </p>
                           </Link>
 
                           <Link to="/book">
-                            <a
+                            <p
                            
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                               Book Now
-                            </a>
+                            </p>
                           </Link>
 
                           <Link to="/register">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                              Register
-                            </a>
+                            </p>
                           </Link>
                           
                         </div>
@@ -226,16 +226,16 @@ import { Link } from "react-router-dom";
 
               <div className="hidden sm:block bg-[#FF0000] p-3 rounded-xl">
               <a
-   href="https://wa.me/923177190178"
-  className="button-4 w-button text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Contact Us
-</a>
+                href="https://wa.me/923177190178"
+                className="button-4 w-button text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact Us
+              </a>
 
-              </div>
-{/* mobile side design */}
+                            </div>
+              {/* mobile side design */}
               <div className="sm:hidden">
                 <button
                   onClick={toggleMobileMenu}
@@ -265,12 +265,12 @@ import { Link } from "react-router-dom";
           {isMobileMenuOpen && (
             <div className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white mt-[25px]">
-                <a
+                <p
                   href="/"
                   className="text-lg font-medium text-gray-500 hover:text-white block px-3 py-2 rounded-md "
                 >
                   Services
-                </a>
+                </p>
 
              <div className="relative">
   <button
@@ -337,20 +337,20 @@ import { Link } from "react-router-dom";
                   {isAboutOpen && (
                     <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                       <Link to="/faq">
-                        <a
+                        <p
                          
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
                           FAQs
-                        </a>
+                        </p>
                       </Link>
                       <Link to="/blog">
-                        <a
+                        <p
                          
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
                           Blog
-                        </a>
+                        </p>
                       </Link>
 
                       
@@ -383,30 +383,30 @@ import { Link } from "react-router-dom";
                   {isClientPortalOpen && (
                     <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                       <Link to="/login">
-                        <a
+                        <p
                          
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                         >
                           Login
-                        </a>
+                        </p>
                       </Link>
 
                       <Link to="/book">
-                        <a
+                        <p
                         
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                         >
                           Book Now
-                        </a>
+                        </p>
                       </Link>
 
                       <Link to="/register">
-                            <a
+                            <p
                              
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
                             >
                              Register
-                            </a>
+                            </p>
                           </Link>
 
                     </div>
