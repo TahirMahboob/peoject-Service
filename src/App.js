@@ -14,8 +14,6 @@ import Login from './components/Client Portal/Login';
 import Register from './components/Client Portal/Register';
 import ForgetPassword from './components/Client Portal/ForgetPassword';
 
-
-
 import Dashboard from "./pages/Dashboard";
 import MainLayout from "./components/MainLayout";
 import Services from "./pages/Services";
