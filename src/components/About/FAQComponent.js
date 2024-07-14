@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Hero from "../Hero"
 import Footer from '../Footer'; 
+import FaqImage from '../../assests/images/dcColony.jpg'
 
 
 
@@ -70,7 +71,7 @@ const FAQComponent = () => {
 
   return (
     <>
-    <Hero text={"FAQ"} text1={"services"}/>
+    <Hero text={"FAQ"} text1={"services"} image={FaqImage} />
     <h1 className="text-2xl md:text-6xl text-gray text-center m-5 p-5 font-bold mb-4 font-sans ">FAQ's</h1>
       <div className="max-w-2xl mx-auto mt-8">
       {faqs.map((faq, index) => (

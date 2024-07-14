@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 
-  function Hero( {text , text1}) {
+  function Hero( {text , text1,image}) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+// console.log(image);
     const toggleServicesDropdown = () => {
       setIsServicesOpen(!isServicesOpen);
       setIsClientPortalOpen(false);
@@ -422,7 +422,7 @@ import { Link } from "react-router-dom";
      className="relative w-full h-screen"
      style={{
        backgroundImage:
-         "linear-gradient(to right, rgba(0, 123, 255, 0.89) 25%, rgba(0, 123, 255, 0) 80%), url('/images/blog.jpg')",
+         `linear-gradient(to right, rgba(0, 123, 255, 0.89) 25%, rgba(0, 123, 255, 0) 80%), url(${image})`,
        backgroundSize: "cover",
        backgroundPosition: "top",
      }}

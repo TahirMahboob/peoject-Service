@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Hero from "../Hero"
 import Footer from '../Footer'; 
-
+import BlogImage from '../../assests/images/dcColony.jpg'
 
 
 
@@ -41,7 +41,7 @@ const Gallery = () => {
 
   return (
     <>
-    <Hero text="Gallery" text1 ="services" />
+    <Hero text="Gallery" text1 ="services" image={BlogImage} />
     <h1 className="text-2xl md:text-6xl text-gray text-center m-5 p-5 font-bold mb-4 font-sans ">Gallery</h1>
     <div className="container mx-auto px-4 mb-[80px] mt-[20px]">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
