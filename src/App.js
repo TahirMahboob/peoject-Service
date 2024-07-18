@@ -17,7 +17,6 @@ import ForgetPassword from './components/Client Portal/ForgetPassword';
 import Dashboard from "./pages/Dashboard";
 import MainLayout from "./components/MainLayout";
 import Services from "./pages/Services";
-import Employees from "./pages/Employees";
 import Customers from "./pages/Customers";
 
 function App() {
@@ -37,12 +36,9 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/forgetpassword' element={<ForgetPassword/>}/>
 
-
-
         <Route path="/admin" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="services" element={<Services />} />
-          <Route path="Employees" element={<Employees />} />
           <Route path="Customers" element={<Customers />} />
 
 

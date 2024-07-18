@@ -56,10 +56,7 @@ const MainLayout = () => {
                   key: "services",
                   label: "Services",
                 },
-                {
-                  key: "employees",
-                  label: "Employees",
-                },
+              
                 {
                   key: "customers",
                   label: "Customers",

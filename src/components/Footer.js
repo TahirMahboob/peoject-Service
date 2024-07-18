@@ -35,14 +35,7 @@ function Footer() {
                 alt="Instagram"
               />
             </a>
-            <a href="#" className="flex items-center">
-              <img
-                src="https://assets-global.website-files.com/6251a78116ff6353d61a6179/6258c0fb6e5319af43989fde_yelp.svg"
-                loading="lazy"
-                width="16"
-                alt="Yelp"
-              />
-            </a>
+           
             <a
               href="https://www.facebook.com/share/3ZPrQMwiWq9XViwB/?mibextid=LQQJ4d"
               className="flex items-center"
@@ -54,63 +47,68 @@ function Footer() {
                 alt="Facebook"
               />
             </a>
-            <a href="#" className="flex items-center">
-              <img
-                src="https://assets-global.website-files.com/6251a78116ff6353d61a6179/6258c978f82597d4850e308a_Link.svg"
-                loading="lazy"
-                width="20"
-                alt="Link"
-              />
-            </a>
+
+            <a href="https://wa.me/923177190178" className="flex items-center ">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              loading="lazy"
+              width="20"
+              alt="WhatsApp"
+              className='text-white'
+            />
+          </a>
+
           </div>
         </div>
         <div className="w-full lg:w-2/3 flex flex-col lg:flex-row justify-between text-[#c7c4c4]">
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-            <a href="#" className="block mt-2">
+            <p  className="block mt-2">
               About
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p  className="block mt-2">
               Professional cleaning services
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p  className="block mt-2">
               Cleaning services near me
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p  className="block mt-2">
               Blog
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p  className="block mt-2">
               FAQ
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p  className="block mt-2">
               Trabajo / Job
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p  className="block mt-2">
               Privacy policy
-            </a>
+            </p>
           </div>
           <div className="w-full lg:w-1/2">
-            <a href="/request-a-quote" className="block mt-2">
+            <p className="block mt-2">
               Request quote
-            </a>
-            <a
-              href="https://berryclean.launch27.com/login"
+            </p>
+            <p
+             
               target="_blank"
               className="block mt-2"
             >
               Client portal
-            </a>
-            <a href="#" className="block mt-2">
+            </p>
+            <p className="block mt-2">
               Book now
-            </a>
-            <a href="/refer" className="block mt-2">
+            </p>
+            <p className="block mt-2">
               Refer a friend
-            </a>
-            <a href="/members" className="block mt-2">
+            </p>
+            <p className="block mt-2">
               Memberships
-            </a>
-            <a href="/cleaning-gift-card" className="block mt-2">
+            </p>
+
+            <p className="block mt-2">
               Gift cards
-            </a>
+            </p>
+
           </div>
         </div>
       </div>
@@ -122,7 +120,8 @@ function Footer() {
         <div className="w-full lg:w-1/2">
           <p>
             Powered by{" "}
-            <a href="http://www.withsimba.com" target="_blank" className="underline">
+
+            <a href="https://www.youtube.com/@TahirTechnology-ci6mz" className="underline">
               Wahab & Tahir
             </a>
           </p>

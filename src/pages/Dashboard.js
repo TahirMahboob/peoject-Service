@@ -53,10 +53,7 @@ const Dashboard = () => {
           <i className="fas fa-file-alt text-4xl mb-2 text-red-500"></i>
           <div className="text-xl">Report</div>
         </div>
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center hover:bg-gray-200 transition duration-300">
-          <i className="fas fa-exchange-alt text-4xl mb-2 text-purple-500"></i>
-          <div className="text-xl">Transactions</div>
-        </div>
+      
       </div>
 
       <div className="mt-20">

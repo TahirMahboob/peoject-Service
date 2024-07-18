@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-
+import { Link} from "react-router-dom";
 
   function Hero( {text , text1,image}) {
+    // const navigate=useNavigate()
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -41,27 +41,29 @@ import { Link } from "react-router-dom";
 
                 {/*header logo set tahir bhi */}
               <div className="flex-shrink-0">
+              <a href="/" className="flex items-center space-x-2">
               <img
                 className="block w-[100px] sm:w-[150px] lg:w-[90px] lg:mt-[5px] rounded-full"
                 src="/images/Logo.jpg"
                 alt="Logo"
               />
+                </a>
             </div>
 
 
-                <div className="hidden  sm:block sm:ml-6 text-black ">
+                <div className="hidden sm:block sm:ml-6 text-black">
                   <div className="flex space-x-4 ml-40">
-                    <a
-                      href="/"
-                      className="text-lg font-semibold text-white hover:text-gray-500 px-3 py-2 rounded-md "
-                    >
-                      Services
-                    </a>
+                                  
+                  <a
+                  href="/"
+                  className="text-lg font-medium text-white hover:text-white block px-3 py-2 rounded-md ">
+                  Services
+                 </a>
 
                     <div className="relative">
                       <button
                         onClick={toggleServicesDropdown}
-                        className="text-lg font-semibold  text-white hover:text-white px-3 py-2 rounded-md   flex items-center"
+                        className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md  flex items-center"
                       >
                         Services areas
                         <svg
@@ -265,12 +267,12 @@ import { Link } from "react-router-dom";
           {isMobileMenuOpen && (
             <div className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white mt-[25px]">
-                <p
+                <a
                   href="/"
                   className="text-lg font-medium text-gray-500 hover:text-white block px-3 py-2 rounded-md "
                 >
                   Services
-                </p>
+                </a>
 
              <div className="relative">
   <button
