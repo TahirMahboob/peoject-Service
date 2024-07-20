@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link} from "react-router-dom";
 
-  function Hero( {text , text1,image}) {
+  function Hero( {text , text1, image}) {
     // const navigate=useNavigate()
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
