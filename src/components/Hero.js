@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import DropDown from '../common/DropDown';
 import SmallDropDown from '../common/SmallDropDown';
+import { Link } from 'react-router-dom';
+import UserContext from './Context/UserContext';
 
 function Hero({ text, text1, image }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-
+  const { user, setUser } = useContext(UserContext);
+  const handleLogout = () => {
+    setUser({
+      userDetails:'',
+      token:'',
+    });
+    window.localStorage.removeItem('auth');
+    console.log(" now at logout uservalue",user);
+  };
+  console.log("uservalue",user);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -55,30 +66,13 @@ function Hero({ text, text1, image }) {
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M19 9l-7 7-7-7"
+
+
                           />
                         </svg>
                       </button>
                       <DropDown array={serviceArea} />
-                      {/* <div className="absolute top-8 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20 hidden group-hover:block">
-                        {serviceArea.map((data, index) => (
-                          <Link to={data.url} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                            {data.name}
-                          </Link>
-                        ))}
-
-                        {/* <Link to="/colony" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          Dc Colony
-                        </Link>
-                        <Link to="/town" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          Model Town
-                        </Link>
-                        <Link to="/Ghakhar" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          Ghakhar
-                        </Link>
-                        <Link to="/sattelite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          Satellite Town
-                        </Link> */}
-                      {/* </div> */}
+                     
 
                     </div>
 
@@ -105,14 +99,7 @@ function Hero({ text, text1, image }) {
                       <DropDown array={aboutSection} />
 
 
-                      {/* <div className="absolute top-8 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20 hidden group-hover:block">
-                        <Link to="/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          FAQs
-                        </Link>
-                        <Link to="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          Blog
-                        </Link>
-                      </div> */}
+                      
 
                     </div>
 
@@ -151,7 +138,6 @@ function Hero({ text, text1, image }) {
                   Contact Us
                 </a>
               </div>
-
               <div className="sm:hidden">
                 <button
                   onClick={toggleMobileMenu}
@@ -211,20 +197,7 @@ function Hero({ text, text1, image }) {
                   </button>
                   {isServicesOpen && (
                     <SmallDropDown array={serviceArea} />
-                    // <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                    //   <Link to="/colony" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    //     Dc Colony
-                    //   </Link>
-                    //   <Link to="/town" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    //     Model Town
-                    //   </Link>
-                    //   <Link to="/Ghakhar" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    //     Ghakhar
-                    //   </Link>
-                    //   <Link to="/sattelite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    //     Satellite Town
-                    //   </Link>
-                    // </div>
+                   
                   )}
                 </div>
 
@@ -278,7 +251,34 @@ function Hero({ text, text1, image }) {
                     </svg>
                   </button>
                   {isClientPortalOpen && (
-                    <SmallDropDown array={clientSection} />
+                    <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                      {user?.token ? (
+                        <p
+                          onClick={handleLogout}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 cursor-pointer"
+                        >
+                          Logout
+                        </p>
+                      ) : (
+                        <>
+                          <Link to="/login">
+                            <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">
+                              Login
+                            </p>
+                          </Link>
+                          <Link to="/register">
+                            <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">
+                              Register
+                            </p>
+                          </Link>
+                        </>
+                      )}
+                      <Link to="/book">
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">
+                          Book Now
+                        </p>
+                      </Link>
+                    </div>
                   )}
                 </div>
               </div>
@@ -287,17 +287,62 @@ function Hero({ text, text1, image }) {
         </nav >
       </div >
 
-      <div className="relative w-full h-[500px]">
-        <img
-          src={image}
-          alt="Hero"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col justify-center items-center text-white">
-          <h1 className="text-4xl font-bold">{text}</h1>
-          <p className="mt-4 text-lg">{text1}</p>
+    
+    {/* </>
+  );
+} */}
+
+      <div
+        className="relative w-full h-screen"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0, 123, 255, 0.89) 25%, rgba(0, 123, 255, 0) 80%), url(${image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'top',
+        }}
+      >
+        <div className="absolute inset-0 flex items-center justify-start px-8 mt-40">
+          <div className="text-left">
+            <h1 className="text-2xl md:text-6xl text-white font-bold mb-4 font-sans ">
+              {/* About our */} {text}
+            </h1>
+            <h1 className="text-2xl md:text-6xl text-white font-bold font-sans  mb-4">
+              {/* Services */} {text1}
+            </h1>
+            <p className="text-lg md:text-xl text-white mb-8">
+              Happiness Guaranteed. If you're not satisfied, we'll come back and
+              make
+              <br /> it right, free of charge.
+            </p>
+            <Link to="/Book">
+              <button className="bg-[#FF0000] text-white px-8 py-3 rounded-lg  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Book Now
+              </button>
+              <div className="flex">
+                <img
+                  src="https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars.png"
+                  loading="lazy"
+                  width="115"
+                  height="auto"
+                  alt="5 stars rating"
+                  className="mr-2
+         mt-4"
+                  srcSet="
+           https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars-p-500.png 500w,
+           https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars-p-800.png 800w,
+           https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars-p-1080.png 1080w,
+           https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars-p-1600.png 1600w,
+           https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars-p-2000.png 2000w,
+           https://assets-global.website-files.com/6251a78116ff6353d61a6179/66077e153e90ccf7c8f17907_5_stars.png 2025w
+         "
+                  sizes="115px"
+                />
+                <p className="mt-4 text-white">4.9 Stars</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
+      {/* end of header */}
     </>
   );
 }

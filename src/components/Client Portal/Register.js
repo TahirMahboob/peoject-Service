@@ -1,29 +1,52 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [registerData,setRegistrationData]=useState({
+    userName:'',
+    email:'',
+    password:'',
+  })
   const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setRegistrationData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit =async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
+    if (!registerData.userName || !registerData.email || !registerData.password) {
+      alert("Required All fields");
       return;
     }
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const userExists = users.some((user) => user.email === email);
-    if (userExists) {
-      alert("User already exists");
-    } else {
-      const newUser = { email, password };
-      users.push(newUser);
-      localStorage.setItem('users', JSON.stringify(users));
-      alert("Registration successful");
-      navigate('/login');
-    }
+  try{
+    const response= await axios.post('http://localhost:4000/user/register',registerData)
+  console.log(`${response.data} and its status is ${response.status}`)
+  if(response.status==201){
+    alert("you Registered successfully");
+    navigate('/login');
+  }
+  if(response.status==200) {
+    alert("Email Laready exist");
+  }
+  }
+  catch(error){
+    console.log(`while Registration error ${error}`);
+  }
+    // const users = JSON.parse(localStorage.getItem('users')) || [];
+    // const userExists = users.some((user) => user.email === email);
+    // if (userExists) {
+    //   alert("User already exists");
+    // } else {
+    //   const newUser = { email, password };
+    //   users.push(newUser);
+    //   localStorage.setItem('users', JSON.stringify(users));
+    //   alert("Registration successful");
+    //   navigate('/login');
+    // }
   };
 
   return (
@@ -32,12 +55,23 @@ const Register = () => {
         <div className="max-w-md mx-auto my-10 p-5 border border-gray-300 rounded-md shadow-md">
           <h2 className="text-center text-2xl mb-6 text-gray-800">Sign Up</h2>
           <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+              <label className="block text-gray-700">Username</label>
+              <input
+                type="text"
+                value={registerData.userName}
+                onChange={handleChange}
+                name='userName'
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-500"
+              />
+            </div>
             <div className="mb-4">
               <label className="block text-gray-700">Email</label>
               <input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={registerData.email}
+                name='email'
+                onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-500"
               />
             </div>
@@ -45,20 +79,13 @@ const Register = () => {
               <label className="block text-gray-700">Password</label>
               <input
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={registerData.password}
+                name='password'
+                onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-500"
               />
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700">Confirm Password</label>
-              <input
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-red-500"
-              />
-            </div>
+           
             <button type="submit" className="w-full py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Sign Up</button>
           </form>
           <div className="text-center mt-4">
