@@ -1,38 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
+import DropDown from '../common/DropDown';
+import SmallDropDown from '../common/SmallDropDown';
 import { Link } from 'react-router-dom';
 import UserContext from './Context/UserContext';
 
 function Hero({ text, text1, image }) {
-  const { user, setUser } = useContext(UserContext);
-  // const navigate=useNavigate()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // console.log(image);
-  const toggleServicesDropdown = () => {
-    setIsServicesOpen(!isServicesOpen);
-    setIsClientPortalOpen(false);
-    setIsAboutOpen(false);
-  };
-
-  const toggleClientPortalDropdown = () => {
-    setIsClientPortalOpen(!isClientPortalOpen);
-    setIsServicesOpen(false);
-    setIsAboutOpen(false);
-  };
-
-  const toggleAboutDropdown = () => {
-    setIsAboutOpen(!isAboutOpen);
-    setIsServicesOpen(false);
-    setIsClientPortalOpen(false);
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-  // const [userDetail, setUserDetail] = useState(null);
-
+  const { user, setUser } = useContext(UserContext);
   const handleLogout = () => {
     setUser({
       userDetails:'',
@@ -42,32 +19,19 @@ function Hero({ text, text1, image }) {
     console.log(" now at logout uservalue",user);
   };
   console.log("uservalue",user);
-  
-  // useEffect(() => {
-  //   console.log(1);
-  //   if (user) {
-  //     console.log(user);
-  //     setUserDetail(user);
-  //   }
-  // }, [user]);
-  // useEffect(() => {
-  //   console.log(1);
-  //   if (user) {
-  //     console.log(user);
-  //     setUserDetail(user);
-  //   }
-  // }, []);
-  // console.log(userDetail);
-
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const serviceArea = [{ name: 'Dc Colony', url: '/colony' }, { name: 'Model Town', url: '/town' }, { name: 'Ghakhar', url: '/Ghakhar' }, { name: 'Satellite Town', url: '/sattelite' },]
+  const aboutSection = [{ name: 'FAQs', url: '/faq' }, { name: 'Blog', url: '/blog' }]
+  const clientSection = [{ name: 'Login', url: '/login' }, { name: 'Register', url: '/register' }, { name: 'Book Now', url: '/book' },]
   return (
     <>
-      {/* header hearo start */}
       <div className="relative">
         <nav className="absolute top-2 left-0 w-full bg-opacity-50 text-white z-10">
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
-              <div className="flex items-center ">
-                {/*header logo set tahir bhi */}
+              <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <a href="/" className="flex items-center space-x-2">
                     <img
@@ -82,16 +46,12 @@ function Hero({ text, text1, image }) {
                   <div className="flex space-x-4 ml-40">
                     <a
                       href="/"
-                      className="text-lg font-medium text-white hover:text-white block px-3 py-2 rounded-md "
-                    >
+                      className="text-lg font-medium text-white hover:text-white block px-3 py-2 rounded-md">
                       Services
                     </a>
 
-                    <div className="relative">
-                      <button
-                        // onClick={toggleServicesDropdown}
-                        className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md  flex items-center"
-                      >
+                    <div className="relative group">
+                      <button className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md flex items-center">
                         Services areas
                         <svg
                           className="ml-2 h-5 w-5"
@@ -111,29 +71,13 @@ function Hero({ text, text1, image }) {
                           />
                         </svg>
                       </button>
-                      {isServicesOpen && (
-    <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-      <Link to="/colony" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-        Dc Colony
-      </Link>
-      <Link to="/town" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-        Model Town
-      </Link>
-      <Link to="/Ghakhar" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-        Ghakhar
-      </Link>
-      <Link to="/sattelite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-        Satellite Town
-      </Link>
-    </div>
-  )}
+                      <DropDown array={serviceArea} />
+                     
+
                     </div>
 
-                    <div className="relative">
-                      <button
-                        onClick={toggleAboutDropdown}
-                        className="text-lg font-semibold  text-white hover:text-white px-3 py-2 rounded-md  flex items-center"
-                      >
+                    <div className="relative group">
+                      <button className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md flex items-center">
                         About
                         <svg
                           className="ml-2 h-5 w-5"
@@ -151,27 +95,16 @@ function Hero({ text, text1, image }) {
                           />
                         </svg>
                       </button>
-                      {isAboutOpen && (
-                        <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                          <Link to="/faq">
-                            <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              FAQs
-                            </p>
-                          </Link>
-                          <Link to="/blog">
-                            <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                              Blog
-                            </p>
-                          </Link>
-                        </div>
-                      )}
+
+                      <DropDown array={aboutSection} />
+
+
+                      
+
                     </div>
 
-                    <div className="relative">
-                      <button
-                        onClick={toggleClientPortalDropdown}
-                        className="text-lg font-semibold  text-white hover:text-white px-3 py-2 rounded-md   flex items-center"
-                      >
+                    <div className="relative group">
+                      <button className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md flex items-center">
                         Client Portal
                         <svg
                           className="ml-2 h-5 w-5"
@@ -189,41 +122,7 @@ function Hero({ text, text1, image }) {
                           />
                         </svg>
                       </button>
-                      {isClientPortalOpen && (
-                        <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                         
-                         {user?.token ? (
-                            <p
-                              onClick={handleLogout}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 cursor-pointer"
-                            >
-                              Logout
-                            </p>
-                          ) : (
-                            <>
-                              <Link to="/login">
-                                <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">
-                                  Login
-                                </p>
-                              </Link>
-                              <Link to="/register">
-                                <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">
-                                  Register
-                                </p>
-                              </Link>
-                            </>
-                          )}
-                          
-
-                          <Link to="/book">
-                            <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">
-                              Book Now
-                            </p>
-                          </Link>
-
-                          
-                        </div>
-                      )}
+                      <DropDown array={clientSection} />
                     </div>
                   </div>
                 </div>
@@ -239,7 +138,6 @@ function Hero({ text, text1, image }) {
                   Contact Us
                 </a>
               </div>
-              {/* mobile side design */}
               <div className="sm:hidden">
                 <button
                   onClick={toggleMobileMenu}
@@ -277,8 +175,7 @@ function Hero({ text, text1, image }) {
 
                 <div className="relative">
                   <button
-                   
-                   // onClick={toggleServicesDropdown}
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
                     className="text-lg font-medium text-gray-500 hover:text-gray-500 px-3 py-2 rounded-md flex items-center"
                   >
                     Service Area
@@ -299,39 +196,15 @@ function Hero({ text, text1, image }) {
                     </svg>
                   </button>
                   {isServicesOpen && (
-                    <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                      <Link
-                        to="/colony"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Dc Colony
-                      </Link>
-                      <Link
-                        to="/town"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Model Town
-                      </Link>
-                      <Link
-                        to="/Ghakhar"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Ghakhar
-                      </Link>
-                      <Link
-                        to="/sattelite"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Satellite Town
-                      </Link>
-                    </div>
+                    <SmallDropDown array={serviceArea} />
+                   
                   )}
                 </div>
 
                 <div className="relative">
                   <button
-                    onClick={toggleAboutDropdown}
-                    className="text-lg font-medium text-gray-500 hover:text-gray-500  px-3 py-2 rounded-md  flex items-center"
+                    onClick={() => setIsAboutOpen(!isAboutOpen)}
+                    className="text-lg font-medium text-gray-500 hover:text-gray-500 px-3 py-2 rounded-md flex items-center"
                   >
                     About
                     <svg
@@ -351,25 +224,14 @@ function Hero({ text, text1, image }) {
                     </svg>
                   </button>
                   {isAboutOpen && (
-                    <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                      <Link to="/faq">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          FAQs
-                        </p>
-                      </Link>
-                      <Link to="/blog">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                          Blog
-                        </p>
-                      </Link>
-                    </div>
+                    <SmallDropDown array={aboutSection} />
                   )}
                 </div>
 
                 <div className="relative">
                   <button
-                    onClick={toggleClientPortalDropdown}
-                    className="text-lg font-medium text-gray-500 hover:text-gray-500  px-3 py-2 rounded-md   flex items-center"
+                    onClick={() => setIsClientPortalOpen(!isClientPortalOpen)}
+                    className="text-lg font-medium text-gray-500 hover:text-gray-500 px-3 py-2 rounded-md flex items-center"
                   >
                     Client Portal
                     <svg
@@ -422,8 +284,13 @@ function Hero({ text, text1, image }) {
               </div>
             </div>
           )}
-        </nav>
-      </div>
+        </nav >
+      </div >
+
+    
+    {/* </>
+  );
+} */}
 
       <div
         className="relative w-full h-screen"
