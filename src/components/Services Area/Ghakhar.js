@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Footer from '../Footer';
-import Hero from '../Hero';
+import Footer from '../../common/Footer';
+import Hero from '../../common/Hero';
 import BlogImage from '../../assests/images/GHK.jpg';
 
 function Ghakhar() {
@@ -128,13 +128,13 @@ function Ghakhar() {
               <p className="block mt-2">
                 Satluj-Block
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Hajvery-Block
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Sawan-Block
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Indus-Block
               </p>
               <p className="block mt-2">
@@ -144,13 +144,13 @@ function Ghakhar() {
             </div>
             <div>
               <p
-                
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Jinnah Town
               </p>
               <p
-               
+
                 target="_blank"
                 className="block mt-2"
               >
@@ -162,55 +162,55 @@ function Ghakhar() {
               <p className="block mt-2">
                 Pizza Hut chownk
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 C-Block
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Allah chownk
               </p>
             </div>
             <div className="mt-6 lg:mt-0">
               <p
-               
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Chadar Town
               </p>
               <p
-               
+
                 target="_blank"
                 className="block mt-2"
               >
                 Client portal
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Book now
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Refer a friend
               </p>
               <p className="block mt-2">
                 Memberships
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Gift cards
               </p>
             </div>
             <div className="mt-6 lg:mt-0">
               <p
-               
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Sultan pura
               </p>
               <p
-              
+
                 target="_blank"
                 className="block mt-2"
               >
                 Block A
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Block B
               </p>
               <p className="block mt-2">

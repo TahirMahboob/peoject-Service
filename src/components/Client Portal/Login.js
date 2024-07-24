@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext,useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import UserContext from '../Context/UserContext';
 
@@ -10,9 +10,10 @@ const Login = () => {
   });
 
   const { user, setUser } = useContext(UserContext);
-  console.log("login asdfsafa",user);
+  console.log("login asdfsafa", user);
 
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleChange = (event) => {
@@ -42,15 +43,16 @@ const Login = () => {
         loginData
       );
 
-  
-      if(response.status===200){
+
+      if (response.status === 200) {
         setUser({
           userDetails: "user",
           token: response.data.token,
         });
-           localStorage.setItem('auth',JSON.stringify(response))
+        localStorage.setItem('auth', JSON.stringify(response))
+        // localStorage.setItem('role', JSON.stringify(response.data.user.role))
       }
-     
+
       // setIsAuthenticated(true);
       navigate('/');
     } catch (error) {

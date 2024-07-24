@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import Hero from '../Hero';
+import Hero from '../../common/Hero';
 import BlogImage from '../../assests/images/headerimg.jpg'
-import Footer from '../Footer'; 
+import Footer from '../../common/Footer';
 
 function Ourcleaning() {
   return (
     <>
-    <Hero text="Home Services in" text1 ="Gujranwala" image={BlogImage} />
-    
+      <Hero text="Home Services in" text1="Gujranwala" image={BlogImage} />
+
 
 
       {/* services */}
@@ -25,7 +25,7 @@ function Ourcleaning() {
         </div>
 
 
-      
+
         <div className="mt-10 w-full px-4">
           <div className="flex flex-wrap justify-center">
             {[
@@ -193,8 +193,9 @@ function Ourcleaning() {
                 </div>
               </div>
             </div>
+
           </div>
-          
+
         </div>
 
       </div>
@@ -216,10 +217,10 @@ function Ourcleaning() {
         </Link>
         <div className="w-full mt-10 lg:w-2/3 mx-auto flex flex-col justify-center mb-32 text-[#9c9b9b]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-           
+
             <div>
-            <p
-              
+              <p
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Dc-Colony
@@ -233,88 +234,88 @@ function Ourcleaning() {
               <p className="block mt-2">
                 Ravi Block
               </p>
-              
+
             </div>
 
             <div>
               <p
-               
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Model-Town
               </p>
               <p
-               
+
                 target="_blank"
                 className="block mt-2"
               >
                 Dhully
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 College Road
               </p>
-              <p  className="block mt-2">
-               HFC   Model Town
+              <p className="block mt-2">
+                HFC   Model Town
               </p>
               <p className="block mt-2">
-               The Educator Campus
+                The Educator Campus
               </p>
-              
+
             </div>
 
             <div className="mt-6 lg:mt-0">
               <p
-              
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Ghakhar
               </p>
               <p
-               
+
                 target="_blank"
                 className="block mt-2"
               >
-               Khreembad
+                Khreembad
               </p>
               <p className="block mt-2">
-              Sardar Town
+                Sardar Town
               </p>
               <p className="block mt-2">
-               Jinnah Town
+                Jinnah Town
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
                 Chadar Town
               </p>
-              <p  className="block mt-2">
-                Sultan Pura 
+              <p className="block mt-2">
+                Sultan Pura
               </p>
             </div>
 
             <div className="mt-6 lg:mt-0">
               <p
-               
+
                 className="block mt-2 font-medium text-2xl text-black underline"
               >
                 Satellite-Town
               </p>
               <p
-               
+
                 target="_blank"
                 className="block mt-2"
               >
-               Police LInes
-              </p>
-              <p  className="block mt-2">
-               Town Market
+                Police LInes
               </p>
               <p className="block mt-2">
-             Wahdat Colony
+                Town Market
               </p>
-              <p  className="block mt-2">
+              <p className="block mt-2">
+                Wahdat Colony
+              </p>
+              <p className="block mt-2">
                 Rasheed Colony
               </p>
               <p className="block mt-2">
-              Abdullah Colony
+                Abdullah Colony
               </p>
             </div>
 
@@ -323,7 +324,7 @@ function Ourcleaning() {
       </div>
 
 
-     <Footer/>
+      <Footer />
 
     </>
   );

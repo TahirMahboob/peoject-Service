@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Hero from '../Hero';
+import Hero from '../../common/Hero';
 import BlogImage from '../../assests/images/blog.jpg';
-import Footer from '../Footer';
+import Footer from '../../common/Footer';
 
 function Book() {
   const [location, setLocation] = useState({ latitude: '', longitude: '' });
@@ -37,8 +37,8 @@ function Book() {
             </div>
             <div id="Request-a-quote" className="w-full max-w-lg mx-auto">
               <form className="space-y-4 border 1px solid black p-5">
-                
-               
+
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
                     <label htmlFor="First-name" className="mb-2">First Name *</label>
@@ -97,10 +97,10 @@ function Book() {
                   </div>
                 </div>
 
-                
+
 
                 <div className="grid grid-cols-1 gap-4">
-                    <div className="flex flex-col">
+                  <div className="flex flex-col">
                     <label htmlFor="Frequency" className="mb-2">Address *</label>
                     <input
                       className="form-input w-full p-2 border border-gray-300 rounded"
@@ -117,33 +117,33 @@ function Book() {
 
                 <div className="grid grid-cols-1 gap-4">
 
-                 <div className="flex flex-col">
-                <label htmlFor="Gujranwala-area" className="mb-2">Select Gujranwala Area *</label>
-                <select
-                  id="Gujranwala-area"
-                  name="Gujranwala-area"
-                  data-name="Gujranwala area"
-                  required
-                  className="form-select w-full p-2 border border-gray-300 rounded"
-                >
-                  <option value="" disabled selected>Select Area</option>
-                  <option value="Satellite Town">Satellite Town</option>
-                  <option value="Model Town">Model Town</option>
-                  <option value="Peoples Colony">Peoples Colony</option>
-                  <option value="Master City">Master City</option>
-                  <option value="Citi Housing">Citi Housing</option>
-                  <option value="Wapda Town">Wapda Town</option>
-                  <option value="Garden Town">Garden Town</option>
-                  <option value="Dc colony">Dc colony</option>
-                  <option value="Ghakhar">Ghakhar</option>
-                  <option value="Nowshera Virkan">Nowshera Virkan</option>
-                  <option value="Kāmoke">Kāmoke</option>
-                  <option value="Wazirabad">Wazirabad</option>
-                  <option value="Gujranwala Cantt">Gujranwala Cantt</option>
-                  <option value="Eminabad">Eminabad</option>
-                  <option value="Qila Didar Singh">Qila Didar Singh</option>
-                </select>
-              </div>
+                  <div className="flex flex-col">
+                    <label htmlFor="Gujranwala-area" className="mb-2">Select Gujranwala Area *</label>
+                    <select
+                      id="Gujranwala-area"
+                      name="Gujranwala-area"
+                      data-name="Gujranwala area"
+                      required
+                      className="form-select w-full p-2 border border-gray-300 rounded"
+                    >
+                      <option value="" disabled selected>Select Area</option>
+                      <option value="Satellite Town">Satellite Town</option>
+                      <option value="Model Town">Model Town</option>
+                      <option value="Peoples Colony">Peoples Colony</option>
+                      <option value="Master City">Master City</option>
+                      <option value="Citi Housing">Citi Housing</option>
+                      <option value="Wapda Town">Wapda Town</option>
+                      <option value="Garden Town">Garden Town</option>
+                      <option value="Dc colony">Dc colony</option>
+                      <option value="Ghakhar">Ghakhar</option>
+                      <option value="Nowshera Virkan">Nowshera Virkan</option>
+                      <option value="Kāmoke">Kāmoke</option>
+                      <option value="Wazirabad">Wazirabad</option>
+                      <option value="Gujranwala Cantt">Gujranwala Cantt</option>
+                      <option value="Eminabad">Eminabad</option>
+                      <option value="Qila Didar Singh">Qila Didar Singh</option>
+                    </select>
+                  </div>
 
 
                 </div>

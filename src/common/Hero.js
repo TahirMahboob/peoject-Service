@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import DropDown from '../common/DropDown';
 import SmallDropDown from '../common/SmallDropDown';
 import { Link } from 'react-router-dom';
-import UserContext from './Context/UserContext';
+import UserContext from '../../src/components/Context/UserContext';
+
 
 function Hero({ text, text1, image }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,13 +13,13 @@ function Hero({ text, text1, image }) {
   const { user, setUser } = useContext(UserContext);
   const handleLogout = () => {
     setUser({
-      userDetails:'',
-      token:'',
+      userDetails: '',
+      token: '',
     });
     window.localStorage.removeItem('auth');
-    console.log(" now at logout uservalue",user);
+    console.log(" now at logout uservalue", user);
   };
-  console.log("uservalue",user);
+  console.log("uservalue", user);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -46,12 +47,12 @@ function Hero({ text, text1, image }) {
                   <div className="flex space-x-4 ml-40">
                     <a
                       href="/"
-                      className="text-lg font-medium text-white hover:text-white block px-3 py-2 rounded-md">
+                      className="text-lg font-medium text-white  hover:text-black  block px-3 py-2 rounded-md">
                       Services
                     </a>
 
                     <div className="relative group">
-                      <button className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md flex items-center">
+                      <button className="text-lg font-semibold hover:text-black text-white  px-3 py-2 rounded-md flex items-center">
                         Services areas
                         <svg
                           className="ml-2 h-5 w-5"
@@ -72,12 +73,12 @@ function Hero({ text, text1, image }) {
                         </svg>
                       </button>
                       <DropDown array={serviceArea} />
-                     
+
 
                     </div>
 
                     <div className="relative group">
-                      <button className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md flex items-center">
+                      <button className="text-lg font-semibold  hover:text-black text-white  px-3 py-2 rounded-md flex items-center">
                         About
                         <svg
                           className="ml-2 h-5 w-5"
@@ -99,12 +100,12 @@ function Hero({ text, text1, image }) {
                       <DropDown array={aboutSection} />
 
 
-                      
+
 
                     </div>
 
                     <div className="relative group">
-                      <button className="text-lg font-semibold text-white hover:text-white px-3 py-2 rounded-md flex items-center">
+                      <button className="text-lg font-semibold hover:text-black text-white px-3 py-2 rounded-md flex items-center ">
                         Client Portal
                         <svg
                           className="ml-2 h-5 w-5"
@@ -124,8 +125,10 @@ function Hero({ text, text1, image }) {
                       </button>
                       <DropDown array={clientSection} />
                     </div>
+
                   </div>
                 </div>
+
               </div>
 
               <div className="hidden sm:block bg-[#FF0000] p-3 rounded-xl">
@@ -138,6 +141,7 @@ function Hero({ text, text1, image }) {
                   Contact Us
                 </a>
               </div>
+
               <div className="sm:hidden">
                 <button
                   onClick={toggleMobileMenu}
@@ -197,7 +201,7 @@ function Hero({ text, text1, image }) {
                   </button>
                   {isServicesOpen && (
                     <SmallDropDown array={serviceArea} />
-                   
+
                   )}
                 </div>
 
@@ -284,11 +288,12 @@ function Hero({ text, text1, image }) {
               </div>
             </div>
           )}
+
         </nav >
       </div >
 
-    
-    {/* </>
+
+      {/* </>
   );
 } */}
 

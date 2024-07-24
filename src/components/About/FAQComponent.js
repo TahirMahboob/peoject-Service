@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Hero from "../Hero"
-import Footer from '../Footer'; 
+import Hero from "../../common/Hero"
+import Footer from '../../common/Footer';
 import FaqImage from '../../assests/images/dcColony.jpg'
 
 
@@ -37,11 +37,11 @@ const FAQItem = ({ faq, index, isOpen, toggleOpen }) => {
         <div className="transform transition-transform">
           {isOpen ? (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="text-red-500">
-              <path fill="currentColor" d="M18.364 5.636l-1.414-1.414L12 9.172 7.05 4.222l-1.414 1.414L10.828 12l-5.192 5.192 1.414 1.414L12 14.828l4.95 4.95 1.414-1.414L13.172 12z"/>
+              <path fill="currentColor" d="M18.364 5.636l-1.414-1.414L12 9.172 7.05 4.222l-1.414 1.414L10.828 12l-5.192 5.192 1.414 1.414L12 14.828l4.95 4.95 1.414-1.414L13.172 12z" />
             </svg>
           ) : (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path fill="currentColor" d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/>
+              <path fill="currentColor" d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" />
             </svg>
           )}
         </div>
@@ -71,24 +71,23 @@ const FAQComponent = () => {
 
   return (
     <>
-    <Hero text={"FAQ"} text1={"services"} image={FaqImage} />
-    <h1 className="text-2xl md:text-6xl text-gray text-center m-5 p-5 font-bold mb-4 font-sans ">FAQ's</h1>
+      <Hero text={"FAQ"} text1={"services"} image={FaqImage} />
+      <h1 className="text-2xl md:text-6xl text-gray text-center m-5 p-5 font-bold mb-4 font-sans ">FAQ's</h1>
       <div className="max-w-2xl mx-auto mt-8">
-      {faqs.map((faq, index) => (
-        <FAQItem
-          key={index}
-          faq={faq}
-          index={index}
-          isOpen={openIndex === index}
-          toggleOpen={toggleOpen}
-        />
-      ))}
-    </div>
+        {faqs.map((faq, index) => (
+          <FAQItem
+            key={index}
+            faq={faq}
+            index={index}
+            isOpen={openIndex === index}
+            toggleOpen={toggleOpen}
+          />
+        ))}
+      </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default FAQComponent;
-  
